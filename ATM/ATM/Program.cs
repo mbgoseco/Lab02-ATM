@@ -9,12 +9,16 @@ namespace ATM
             uint balance = 9999;
             string selection = "";
 
+            Console.WriteLine("Welcome to Mike's ATM!");
+
             while (selection != "4")
             {
+                Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
                 Console.WriteLine("1. View Balance");
                 Console.WriteLine("2. Withdraw Money");
                 Console.WriteLine("3. Deposit Money");
                 Console.WriteLine("4. Exit");
+                Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
                 Console.Write("Choose a selection (1, 2, 3, or 4): ");
                 try
                 {
@@ -27,6 +31,8 @@ namespace ATM
                             break;
                         case "2":
                             uint drawAmt;
+                            Console.Clear();
+                            Console.WriteLine($"Current balance: ${balance}");
                             Console.Write("Enter the amount you would like to withdraw: $");
                             drawAmt = Convert.ToUInt32(Console.ReadLine());
                             if (drawAmt > balance)
@@ -42,6 +48,8 @@ namespace ATM
                             break;
                         case "3":
                             uint addAmt;
+                            Console.Clear();
+                            Console.WriteLine($"Current balance: ${balance}");
                             Console.Write("Enter the amount you would like to deposit: $");
                             addAmt = Convert.ToUInt32(Console.ReadLine());
                             balance = Deposit(balance, addAmt);
@@ -49,7 +57,10 @@ namespace ATM
                             Console.WriteLine($"${addAmt} has been added to your account. You new balance is ${balance}");
                             break;
                         case "4":
-                            Console.WriteLine("Thank you for using our ATM!");
+                            Console.Clear();
+                            Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                            Console.WriteLine("Thank you for using Mike's ATM!");
+                            Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
                             break;
                         default:
                             Console.Clear();
