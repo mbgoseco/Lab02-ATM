@@ -12,8 +12,8 @@ From the main menu, choose one of 4 options:
 Do not worry about withdrawing more than you have, conditional statements and error handling will prevent this from happening. Also, if you accidentally enter an invalid menu option, you will simply be asked to choose again.
 
 ### Screenshots
-![menu]()
-![deposit1]()
-![deposit2]()
-![exception1]()
-![exception2]()
+![menu](https://github.com/mbgoseco/Lab02-ATM/blob/master/assets/intro.PNG)
+![deposit1](https://github.com/mbgoseco/Lab02-ATM/blob/master/assets/deposit1.PNG)
+![deposit2](https://github.com/mbgoseco/Lab02-ATM/blob/master/assets/deposit2.PNG)
+![exception1](https://github.com/mbgoseco/Lab02-ATM/blob/master/assets/exception1.PNG)
+![exception2](https://github.com/mbgoseco/Lab02-ATM/blob/master/assets/exception2.PNG)
