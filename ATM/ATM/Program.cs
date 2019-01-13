@@ -9,10 +9,10 @@ namespace ATM
             uint balance = 9999;
             string selection = "";
 
-            Console.WriteLine("Welcome to Mike's ATM!");
 
             while (selection != "4")
             {
+                Console.WriteLine("Welcome to Mike's ATM!");
                 Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
                 Console.WriteLine("1. View Balance");
                 Console.WriteLine("2. Withdraw Money");
@@ -61,16 +61,21 @@ namespace ATM
                             Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
                             Console.WriteLine("Thank you for using Mike's ATM!");
                             Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                            Console.ReadKey();
                             break;
                         default:
-                            Console.Clear();
                             throw new Exception("Please choose one of the given options.");
                     }
                 }
                 catch (Exception e)
                 {
-                    Console.Clear();
                     Console.WriteLine(e.Message);
+                    Console.WriteLine("Press any key to continue...");
+                    Console.ReadKey();
+                }
+                finally
+                {
+                    Console.Clear();
                 }
             }
         }
