@@ -6,10 +6,11 @@ namespace ATM
     {
         static void Main(string[] args)
         {
+            // Default values for user's balance and menu selection
             uint balance = 9999;
             string selection = "";
 
-
+            // This loop contains the logic and UI for the main menu. The user may enter a selection to use different function of the app. Any exceptions will print a brief message and prompt the user to enter again.
             while (selection != "4")
             {
                 Console.WriteLine("Welcome to Mike's ATM!");
@@ -80,11 +81,13 @@ namespace ATM
             }
         }
 
+        // Returns the user's balance minus the amount requested to withdraw
         public static uint Withdraw(uint balance, uint amount)
         {
             return balance - amount;
         }
 
+        // Returns the user's balance plus the deposited amount
         public static uint Deposit(uint balance, uint amount)
         {
             return balance + amount;
